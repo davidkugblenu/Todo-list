@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Todo List</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+<body class="bg-gray-100 min-h-screen p-4">
+    <!-- Header -->
+    <header class="text-center py-7 text-blue-900">
+        <h1 class="text-3xl font-bold">My Todo-List</h1>
+    </header>
+
+    <!-- Main -->
+    <main class="max-w-md mx-auto bg-white p-6 rounded-xl shadow-md">
+        
+        <form id="task-form" class="flex flex-col gap-4">
+
+            <div class="flex flex-col gap-2">
+                <label for="task" class="font-medium text-gray-700">Task Name</label>
+                <input
+                    type="text"
+                    id="task"
+                    name="task"
+                    placeholder="Enter your task"
+                    required
+                    class="border border-gray-300 rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-blue-500">
+            </div>
+                
+            <div class="flex flex-col gap-2"
+                <label for="date" class="font-medium text-gray-700">Date</label>
+                <input   
+                    type="date" 
+                    id="date"
+                    name="date"
+                    class="border border-gray-300 rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-blue-500">
+            </div>
+
+            <div class="flex flex-col gap-2">
+                <label for="Priority">Choose Priority</label>
+                <select 
+                    name="Priority" 
+                    id="Priority" 
+                    class="border border-gray-300 rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-blue-500">
+                    <option value="Low">Low</option>
+                    <option value="Medium">Medium</option>
+                    <option value="High">High</option>
+                </select>
+            </div>
+
+            <button 
+                 type="submit"
+                 class="text-white bg-blue-700 rounded-lg font-semibold hover:bg-blue-800 focus:outline-none focus:ring-2 focus:ring-blue-500 p-3 trasnsition duration-300 hover:translate-y-4 hover:shadow-xl">Add Task
+            </button>
+
+        </form>
+       
+        <!-- Pending Task -->
+        <section class="mt-8">
+            <h2 class="font-bold text-xl mb-3 text-blue-800">My Tasks
+
+            </h2>
+            <ul class="flex flex-col gap-3">
+                <li>
+                    <div class="flex items-center gap-2 bg-gray-50 rounded-lg p-3 trasnsition duration-300 hover:-translate-x-4 hover:shadow-lg">
+                        <input type="checkbox" id="task1">
+                        <label for="task1">Learn HTML</label>
+                    </div>
+                </li>
+
+                <li>
+                    <div class="flex items-center gap-2 bg-gray-50 rounded-lg p-3 trasnsition duration-300 hover:-translate-x-4 hover:shadow-lg">
+                        <input type="checkbox" id="task2">
+                        <label for="task2">Learn Tailwind CSS</label>
+                    </div>
+                </li>
+
+                <li>
+                    <div class="flex items-center gap-2 bg-gray-50 rounded-lg p-3 trasnsition duration-300 hover:-translate-x-4 hover:shadow-lg">
+                        <input type="checkbox" id="task3">
+                        <label for="task3">Learn Javascript</label>
+                    </div>
+                </li>
+                
+                <li>
+                    <div class="flex items-center gap-2 bg-gray-50 rounded-lg p-3 trasnsition duration-300 hover:-translate-x-4 hover:shadow-lg">
+                        <input type="checkbox" id="task4">
+                        <label for="task4">Learn React</label>
+                    </div>
+                </li>
+
+                <li>
+                    <div class="flex items-center gap-2 bg-gray-50 rounded-lg p-3 trasnsition duration-300 hover:-translate-x-4 hover:shadow-lg">
+                        <input type="checkbox" id="task5">
+                        <label for="task5">Learn Node.js</label>
+                    </div>
+                </li>
+            </ul>
+        </section>
+
+        <!-- Completed Task -->
+         <section class="mt-6">
+            <h2 class="font-bold text-xl text-blue-800">
+                Completed Tasks
+            </h2>
+
+            <ul id="completed-task-list" class=" flex flex-col mt-3">
+                <li>
+                    <div class="flex items-center gap-2 bg-gray-50 rounded-lg p-3 mb-3">
+                        <input type="checkbox" id="completed1" checked>
+                        <label for="completed1" class="text-gray-500 line-through">Complete HTML Assignment</label>
+                    </div>
+                </li>
+            </ul>
+
+         </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="text-center text-gray-500 py-6">
+        <p>&copy; 2026 My Todo List. All rights reserved.</p>
+    </footer>
+    
+</body>
+</html>
